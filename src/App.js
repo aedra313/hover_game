@@ -1,9 +1,7 @@
 import React from "react";
 import './App.css';
-import EasyMode from "./components/easyMode";
-import NormalMode from "./components/normalMode";
-import HardMode from "./components/hardMode";
 import ModeSwitcher from "./components/modeSwitcher";
+import ModeHandler from "./components/modeHandler";
 
 
 function App() {
@@ -15,22 +13,21 @@ function App() {
   let mode;
 switch (chosenMode) {
     case "easyMode":
-        mode = <EasyMode />
+        mode = 5;
       break;
     case "normalMode":
-        mode = <NormalMode />
+        mode = 10
       break;
     case "hardMode":
-        mode = <HardMode />
+        mode = 15
       break;
   }
   console.log(chosenMode)
 
   return (
     <div className="App">
-
       <ModeSwitcher chooseMode={chooseMode} />
-        {mode}
+        <ModeHandler mode={mode} />
     </div>
   );
 }
