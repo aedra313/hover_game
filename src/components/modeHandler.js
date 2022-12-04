@@ -2,23 +2,19 @@ import React from "react";
 
 export default function ModeHandler( {mode}) {
 
-
     const ROW = [];
-    const TD = <td>  </td>
-    for (let i=0; i<mode; i++) {
-        ROW.push(TD)
+    for (let i=1; i<=mode; i++) {
+        ROW.push(<td id={i.toString()}>  </td>)
     }
 
-    const TR = <tr> {ROW} </tr>
     const COLUMN = [];
-    for (let i=0; i<mode; i++) {
-        COLUMN.push(TR)
+    for (let i=1; i<=mode; i++) {
+        COLUMN.push(<tr id={i.toString()}> {ROW} </tr>)
     }
 
 return(
     <table>
         {COLUMN}
-
     </table>
 )
 
