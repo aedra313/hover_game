@@ -1,13 +1,12 @@
 import React from "react";
 
-export default function ModeHandler( {mode}) {
+export default function ModeHandler( {mode, getLogID}) {
 
-    const log = [];
     let rowID;
 
-const handleMouseEnterRow = event => { rowID = event.currentTarget.id; }
+    const handleMouseEnterRow = event => { rowID = event.currentTarget.id; }
 
-    const handleMouseEnterColumn = event => { log.push([event.currentTarget.id, rowID]); console.log(log)   }
+    const handleMouseEnterColumn = event => { getLogID([event.currentTarget.id, rowID]);    }
 
 
     const COLUMN = [];
