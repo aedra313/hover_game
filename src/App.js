@@ -18,24 +18,12 @@ function App() {
     }
     console.log(logID)
 
-  let mode;
-switch (chosenMode) {
-    case "easyMode":
-        mode = 5;
-      break;
-    case "normalMode":
-        mode = 10
-      break;
-    case "hardMode":
-        mode = 15
-      break;
-  }
-  console.log(chosenMode)
+
 
   return (
     <div className="App">
-      <ModeSwitcher chooseMode={chooseMode} get/>
-        <ModeHandler mode={mode} getLogID={getLogID}  />
+        <ModeSwitcher chooseMode={chooseMode} get/>
+        <ModeHandler chosenMode={chosenMode} getLogID={getLogID}  />
         <LogComponent getLogID={logID} />
     </div>
   );

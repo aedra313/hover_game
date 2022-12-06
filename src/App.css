@@ -4,3 +4,7 @@ td {
   background: aqua;
   border: black solid 1px;
 }
+
+.active {
+  background-color: black;
+}

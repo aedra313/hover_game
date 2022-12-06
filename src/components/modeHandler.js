@@ -1,13 +1,36 @@
 import React from "react";
 
-export default function ModeHandler( {mode, getLogID}) {
+
+export default function ModeHandler( {chosenMode, getLogID}) {
 
     let rowID;
+    let mode;
+
 
     const handleMouseEnterRow = event => { rowID = event.currentTarget.id; }
 
-    const handleMouseEnterColumn = event => { getLogID([event.currentTarget.id, rowID]);    }
+    const handleMouseEnterColumn = event => {
+        getLogID([event.currentTarget.id, rowID]);
+        if (event.currentTarget.classList.contains('active')) {
+            event.currentTarget.classList.remove('active')
+        } else {
+            event.currentTarget.classList.add('active')
+        }
 
+    }
+
+    switch (chosenMode) {
+        case "easyMode":
+            mode = 5;
+            break;
+        case "normalMode":
+            mode = 10
+            break;
+        case "hardMode":
+            mode = 15
+            break;
+    }
+    console.log(chosenMode)
 
     const COLUMN = [];
     for (let i=1; i<=mode; i++) {
