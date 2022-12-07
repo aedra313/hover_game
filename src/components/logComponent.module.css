@@ -1,0 +1,6 @@
+.logBox {
+    background-color: rgb(75, 60, 60);
+    height: 400px;
+    width: 300px;
+    overflow-y:scroll;
+}
