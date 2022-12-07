@@ -1,0 +1,19 @@
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    height: 70px;
+    background: linear-gradient(rgba(108, 99, 84, 20),  rgba(50, 40, 40, 20), rgba(25, 20, 20, 20) );
+}
+
+h1 {
+    margin: 0;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto 0;
+}

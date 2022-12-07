@@ -6,7 +6,6 @@ export default function ModeHandler( {chosenMode, getLogID}) {
     let rowID;
     let mode;
 
-
     const handleMouseEnterRow = event => { rowID = event.currentTarget.id; }
 
     const handleMouseEnterColumn = event => {
@@ -16,7 +15,6 @@ export default function ModeHandler( {chosenMode, getLogID}) {
         } else {
             event.currentTarget.classList.add('active')
         }
-
     }
 
     switch (chosenMode) {

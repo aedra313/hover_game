@@ -3,6 +3,8 @@ import './App.css';
 import ModeSwitcher from "./components/modeSwitcher";
 import ModeHandler from "./components/modeHandler";
 import LogComponent from "./components/logComponent";
+import Header from "./components/header";
+import s from "./app.module.css"
 
 
 function App() {
@@ -21,10 +23,20 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className={s.body}>
+        <Header chosenMode={chosenMode} />
+        <main className={s.main}>
+            <div className={s.wrapper}>
         <ModeSwitcher chooseMode={chooseMode} get/>
         <ModeHandler chosenMode={chosenMode} getLogID={getLogID}  />
         <LogComponent getLogID={logID} />
+            </div>
+        </main>
+        <footer className={s.footer}>
+            <div className={s.wrapper}>
+                <p className="credentials">Developed by Vladyslav O. As a pet project</p>
+            </div>
+        </footer>
     </div>
   );
 }
