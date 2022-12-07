@@ -1,4 +1,5 @@
 import React from "react";
+import s from "./modeHandler.module.css"
 
 
 export default function ModeHandler( {chosenMode, getLogID}) {
@@ -32,18 +33,18 @@ export default function ModeHandler( {chosenMode, getLogID}) {
 
     const COLUMN = [];
     for (let i=1; i<=mode; i++) {
-        COLUMN.push(<td onMouseEnter={handleMouseEnterColumn} id={i.toString()}>  </td>)
+        COLUMN.push(<div onMouseEnter={handleMouseEnterColumn} id={i.toString()}>  </div>)
     }
 
     const ROW = [];
     for (let i=1; i<=mode; i++) {
-        ROW.push(<tr onMouseEnter={handleMouseEnterRow} id={i.toString()}> {COLUMN} </tr>)
+        ROW.push(<div onMouseEnter={handleMouseEnterRow} id={i.toString()}> {COLUMN} </div>)
     }
 
 return(
-    <table>
+    <div className={s.table}>
         {ROW}
-    </table>
+    </div>
 )
 
 }
