@@ -1,6 +1,10 @@
 .logBox {
-    background-color: rgb(75, 60, 60);
+    background-color: rgb(100, 85, 85);
     height: 400px;
     width: 300px;
     overflow-y:scroll;
+}
+
+.logBox div:last-child{
+    display: none;
 }
