@@ -17,3 +17,7 @@ h1 {
     width: 1000px;
     margin: 0 auto 0;
 }
+
+header p {
+    color: rgb(150, 135, 135);
+}
