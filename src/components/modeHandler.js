@@ -1,8 +1,20 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import s from "./modeHandler.module.css"
 
 
 export default function ModeHandler( {chosenMode, getLogID}) {
+    const modeRef = useRef([])
+    modeRef.current[modeRef.current.length - 1] !== chosenMode && modeRef.current.push(chosenMode)
+    const[length, setLength] = useState(1)
+
+    let elements = document.querySelectorAll(' div > div');
+
+    if(length != modeRef.current.length){
+
+        setLength(modeRef.current.length) ;
+        for (let elem of elements) {
+            elem.classList.remove('active')
+        }}
 
     let rowID;
     let mode;
