@@ -10,9 +10,14 @@ import s from "./app.module.css"
 function App() {
   const [chosenMode, setChosenMode] = React.useState("");
     const [logID, setLogID] = React.useState("");
+    const [modeSwitcher, setModeSwitcher] = React.useState(false);
 
   const chooseMode = (chosenMode) => {
     setChosenMode(chosenMode);
+  }
+
+  const switchMode = (modeSwitcher) => {
+      setModeSwitcher(modeSwitcher)
   }
 
     const getLogID = (logID) => {
@@ -28,8 +33,8 @@ function App() {
         <main className={s.main}>
             <div className={s.wrapper}>
         <ModeSwitcher chooseMode={chooseMode} get/>
-        <ModeHandler chosenMode={chosenMode} getLogID={getLogID}  />
-        <LogComponent getLogID={logID} />
+        <ModeHandler chosenMode={chosenMode} getLogID={getLogID} switchMode={switchMode}  />
+        <LogComponent getLogID={logID} modeSwitcher={modeSwitcher} />
             </div>
         </main>
         <footer className={s.footer}>

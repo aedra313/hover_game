@@ -2,15 +2,21 @@ import React, {useEffect, useRef, useState} from "react";
 import s from "./modeHandler.module.css"
 
 
-export default function ModeHandler( {chosenMode, getLogID}) {
+export default function ModeHandler( {chosenMode, getLogID, switchMode}) {
     const modeRef = useRef([])
     modeRef.current[modeRef.current.length - 1] !== chosenMode && modeRef.current.push(chosenMode)
     const[length, setLength] = useState(1)
+    const[toggle, setToggle] = useState(false)
+
+
+    console.log(length != modeRef.current.length)
 
     let elements = document.querySelectorAll(' div > div');
 
     if(length != modeRef.current.length){
-
+        setToggle(!toggle)
+        switchMode(toggle)
+        console.log(toggle)
         setLength(modeRef.current.length) ;
         for (let elem of elements) {
             elem.classList.remove('active')
