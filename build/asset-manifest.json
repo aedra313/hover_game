@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.ec53fb73.css",
-    "main.js": "/static/js/main.f1d6d737.js",
-    "static/js/787.0bc37fd2.chunk.js": "/static/js/787.0bc37fd2.chunk.js",
-    "index.html": "/index.html",
-    "main.ec53fb73.css.map": "/static/css/main.ec53fb73.css.map",
-    "main.f1d6d737.js.map": "/static/js/main.f1d6d737.js.map",
-    "787.0bc37fd2.chunk.js.map": "/static/js/787.0bc37fd2.chunk.js.map"
+    "main.css": "/hover_game/static/css/main.ec53fb73.css",
+    "main.js": "/hover_game/static/js/main.95b08525.js",
+    "static/js/787.0bc37fd2.chunk.js": "/hover_game/static/js/787.0bc37fd2.chunk.js",
+    "index.html": "/hover_game/index.html",
+    "main.ec53fb73.css.map": "/hover_game/static/css/main.ec53fb73.css.map",
+    "main.95b08525.js.map": "/hover_game/static/js/main.95b08525.js.map",
+    "787.0bc37fd2.chunk.js.map": "/hover_game/static/js/787.0bc37fd2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ec53fb73.css",
-    "static/js/main.f1d6d737.js"
+    "static/js/main.95b08525.js"
   ]
 }
